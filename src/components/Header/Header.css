@@ -1,0 +1,43 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+  }
+  
+  .logo img {
+    height: 40px; /* Adjust the height as needed */
+    margin-right: 10px; /* Add some spacing between the logo and navigation */
+  }
+  
+  .navigation ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navigation li {
+    margin-right: 10px; /* Adjust the spacing between the tabs */
+  }
+  
+  .book-now-button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .book-now-button:hover {
+    background-color: darkgreen;
+  }
+  
