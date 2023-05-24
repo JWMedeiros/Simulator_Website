@@ -1,21 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Header.css';
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  selectedItem: string;
+  onItemClick: (item: string) => void;
+}
+
+const Header: React.FC<HeaderProps> = ({ selectedItem, onItemClick }) => {
+  const handleItemClick = (item: string) => {
+    onItemClick(item);
+  };
+
   return (
     <header className="header">
       <div className="logo">
-        {/* Add your logo or image here */}
-        <img src="path/to/logo.png" alt="Logo" />
+        <img src="/me.jpg" alt="Logo" />
       </div>
-      <nav className="navigation">
+      <nav className="nav">
         <ul>
-          <li>Tab 1</li>
-          <li>Tab 2</li>
-          <li>Tab 3</li>
+          <li onClick={() => handleItemClick('Item 1')}>Item 1</li>
+          <li onClick={() => handleItemClick('Item 2')}>Item 2</li>
+          <li onClick={() => handleItemClick('Item 3')}>Item 3</li>
         </ul>
       </nav>
-      <button className="book-now-button">Book Now</button>
+      <button className="bookButton">Book Now</button>
     </header>
   );
 };
